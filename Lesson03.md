@@ -61,22 +61,17 @@ classDiagram
     Animal <|-- Dog  
 ```
 
-类之间的多重继承往往会导致方法实现的混乱。为了解决这个问题一些语言引入了接口机制。接口不是类，但可以被类继承，而且一个类可以继承多个接口。并且，接口的成员只有方法而没有属性。
+类之间的多重继承往往会导致方法实现的混乱。为了解决这个问题一些语言引入了接口机制。接口不是类，但可以被类继承，而且一个类可以继承多个接口。并且，接口的成员只有方法而没有属性。这些接口必须在继承了接口的类型中以 `public` 的方式实现。不过由于接口并不是类，当一个类实现了接口的方法，无需使用 `override` 修饰。
 
-接口的成员方法没有访问控制符，因为
-必须是 `public` 且必须在继承了接口的子类中实现。
-
-
-接口类则可以通过加 `<<interface>>` 表示。例如：
-
-
-（没有类型标记）
+接口类则可以通过加 `<<interface>>` 表示，接口中的方法则都不需要访问控制标记。例如：
 
 ````
 ```mermaid
 classDiagram
-    class Comparable{
+    class IComparable{
         <<interface>>
+        Bigger() bool
+        Smaller() bool
     }
     
 ```
@@ -86,11 +81,18 @@ classDiagram
 
 ```mermaid
 classDiagram
-    class Comparable{
+    class IComparable{
         <<interface>>
+        Bigger() bool
+        Smaller() bool
     }
     
 ```
+
+
+
+
+----------------
 
 这些标记并不是通过语法规则定义的，完全可以安装需要扩展。例如结构体可以用 `<<structure>>` 表示。一个简单的三维向量结构体可以表示为（在这个例子中，结构体成员是仿照类成员的写法写的）：
 
