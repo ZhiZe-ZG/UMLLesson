@@ -140,3 +140,41 @@ classDiagram
     Animal <|-- Fish
     Animal <|-- Zebra
 ```
+
+mermaid 代码块中除了图表类型说明和注释以外的部分就是图表的内容描述。不难看出，这些内容大致分为两种单元。一类是定义节点的。例如：
+
+````
+```mermaid
+classDiagram
+class Animal{
+        +age : int
+        +gender : string
+        +IsMammal() bool
+        +Mate()
+    }
+```
+````
+
+定义了这个节点：
+
+```mermaid
+classDiagram
+class Animal{
+        +age : int
+        +gender : string
+        +IsMammal() bool
+        +Mate()
+    }
+```
+
+还有一类定义了节点之间的联线，例如之前代码中的这一行定义了 `Animal` 和 `Duck` 之间的连线。
+
+```
+Animal <|-- Duck
+```
+
+节点的结构要比联线复杂得多。不仅有不同类别的节点，每个节点还会有不同的属性，但其主体是类节点。在后续的介绍中，内容大致分三部分：
+
+1. 类节点
+2. 其他类型的节点和补充
+3. 节点之间的联线
