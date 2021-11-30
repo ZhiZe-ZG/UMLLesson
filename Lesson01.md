@@ -25,22 +25,22 @@ classDiagram
 ```mermaid
 classDiagram
     class Animal{
-        +int age
-        +string gender
-        +bool isMammal()
+        +age : int
+        +gender : string
+        +isMammal() bool
         +mate()
     }
     class Duck{
-        +string beakColor
+        +beakColor : string
         +swim()
         +quack()
     }
     class Fish{
-        -int sizeInFeet
+        -sizeInFeet : int
         -canEat()
     }
     class Zebra{
-        +bool is_wild
+        +is_wild : bool
         +run()
     }
     Animal <|-- Duck
@@ -54,22 +54,86 @@ classDiagram
 ```mermaid
 classDiagram
     class Animal{
-        +int age
-        +string gender
-        +bool isMammal()
+        +age : int
+        +gender : string
+        +isMammal() bool
         +mate()
     }
     class Duck{
-        +string beakColor
+        +beakColor : string
         +swim()
         +quack()
     }
     class Fish{
-        -int sizeInFeet
+        -sizeInFeet : int
         -canEat()
     }
     class Zebra{
-        +bool is_wild
+        +is_wild : bool
+        +run()
+    }
+    Animal <|-- Duck
+    Animal <|-- Fish
+    Animal <|-- Zebra
+```
+
+如果想在 mermaid 代码中增加注释代码，可以以 `%%` 开头。如果一行的`%%`之前只有空白符，它仍然是注释。例如：
+
+````
+```mermaid
+classDiagram
+%% First comment.
+    %% Second comment.
+    class Animal{
+        +age : int
+        +gender : string
+        +isMammal() bool
+        +mate()
+    }
+    %% Third comment.
+    class Duck{
+        +beakColor : string
+        +swim()
+        +quack()
+    }
+    class Fish{
+        -sizeInFeet : int
+        -canEat()
+    }
+    class Zebra{
+        +is_wild : bool
+        +run()
+    }
+    Animal <|-- Duck
+    Animal <|-- Fish
+    Animal <|-- Zebra
+```
+````
+
+渲染后仍为：
+
+```mermaid
+classDiagram
+%% First comment.
+    %% Second comment.
+    class Animal{
+        +age : int
+        +gender : string
+        +isMammal() bool
+        +mate()
+    }
+    %% Third comment.
+    class Duck{
+        +beakColor : string
+        +swim()
+        +quack()
+    }
+    class Fish{
+        -sizeInFeet : int
+        -canEat()
+    }
+    class Zebra{
+        +is_wild : bool
         +run()
     }
     Animal <|-- Duck
