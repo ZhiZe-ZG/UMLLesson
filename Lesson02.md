@@ -20,14 +20,14 @@ classDiagram
 
 在类的花括号里可以填写类成员，每一行为一条类成员。类成员分为属性和方法两种。两种成员的语法不同， mermaid 会自动整理把属性和方法分为两部分显示。
 
-属性由四个必选部分组成。第一部分是访问控制符号。共有四种符号可选：
+属性由三个必选部分组成。第一部分是访问控制符号。共有四种符号可选：
 
 * `+` 表示 public 访问权限
 * `-` 表示 private 访问权限
 * `#` 表示 protected 访问权限
 * `~` 表示 internal (package 内部) 访问权限
 
-第二部分是属性名。第三部分是作为分隔符的冒号。第四部分则是冒号后的类型名。
+第二部分则是冒号后的类型名。第三部分是属性名。
 
 一些典型的属性可以表示为：
 
@@ -35,8 +35,8 @@ classDiagram
 ```mermaid
 classDiagram
     class Animal{
-        +age : int
-        -gender : string
+        +int age
+        -string gender
     }
 ```
 ````
@@ -46,8 +46,8 @@ classDiagram
 ```mermaid
 classDiagram
     class Animal{
-        +age : int
-        -gender : string
+        +int age
+        -string gender
     }
 ```
 
@@ -62,13 +62,13 @@ classDiagram
 没有返回值的方法则可以不标注返回值类型，例如：
 
 ```
-+Eat(food : Food)
++Eat(Food food)
 ```
 
 非空的输入参数列表中每一项又由三部分组成——变量名、冒号和类型——这和属性的标注方法类似。例如：
 
 ```
-+Add(x : int, y : int) int
++Add(int x, int y) int
 ```
 
 如果要为属性或者函数参数设置默认值，可以之间在变量名之后用 `=` 标识。
@@ -79,9 +79,9 @@ classDiagram
 ```mermaid
 classDiagram
     class Animal{
-        +age=10 : int
-        -gender : string
-        +SetAge(x=0 : int)
+        +int age=10 
+        -string gender 
+        +SetAge(int x=0)
     }
 ```
 ````
@@ -91,9 +91,9 @@ classDiagram
 ```mermaid
 classDiagram
     class Animal{
-        +age=10 : int
-        -gender : string
-        +SetAge(x=0 : int)
+        +int age=10 
+        -string gender 
+        +SetAge(int x=0)
     }
 ```
 
@@ -102,6 +102,31 @@ classDiagram
 这里举一个例子：
 
 ```
-+Divide(in dividend : int, in divisor : int, out remainder : int) int 
++Divide(in int dividend, in int divisor, out int remainder) int 
 ```
 
+对于类属性和类方法，还有一个通用的修饰——静态修饰。静态的属性和方法并不属于类的实例而是属于类本身，可以通过类名直接访问并由所属类的所有类实例共享。 mermaid 本身支持使用 `$` 表示静态修饰，并将其修饰为带下划线的形式。对于属性来说， `$` 放置于其变量名之后，对于方法来说， `$` 放置在参数列表括号之后。例如： 
+
+````
+```mermaid
+classDiagram
+    class Complex{
+        +float real 
+        +float imag 
+        +float pi$
+        +Add(x : Complex, y : Complex)$ Complex
+    }
+```
+````
+
+渲染后为：
+
+```mermaid
+classDiagram
+    class Complex{
+        +float real 
+        +float imag 
+        +float pi$
+        +Add(x : Complex, y : Complex)$ Complex
+    }
+```

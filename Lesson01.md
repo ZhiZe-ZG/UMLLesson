@@ -25,23 +25,23 @@ classDiagram
 ```mermaid
 classDiagram
     class Animal{
-        +age : int
-        +gender : string
+        +int age 
+        +string gender 
         +isMammal() bool
         +mate()
     }
     class Duck{
-        +beakColor : string
+        +string beakColor 
         +swim()
         +quack()
     }
     class Fish{
-        -sizeInFeet : int
+        -int sizeInFeet
         -canEat()
     }
     class Zebra{
-        +is_wild : bool
-        +run()
+        +bool isWild 
+        +Run()
     }
     Animal <|-- Duck
     Animal <|-- Fish
@@ -54,23 +54,23 @@ classDiagram
 ```mermaid
 classDiagram
     class Animal{
-        +age : int
-        +gender : string
+        +int age 
+        +string gender 
         +isMammal() bool
         +mate()
     }
     class Duck{
-        +beakColor : string
+        +string beakColor 
         +swim()
         +quack()
     }
     class Fish{
-        -sizeInFeet : int
+        -int sizeInFeet
         -canEat()
     }
     class Zebra{
-        +is_wild : bool
-        +run()
+        +bool isWild 
+        +Run()
     }
     Animal <|-- Duck
     Animal <|-- Fish
@@ -85,24 +85,24 @@ classDiagram
 %% First comment.
     %% Second comment.
     class Animal{
-        +age : int
-        +gender : string
+        +int age
+        +string gender
         +isMammal() bool
         +mate()
     }
     %% Third comment.
     class Duck{
-        +beakColor : string
+        +string beakColor
         +swim()
         +quack()
     }
     class Fish{
-        -sizeInFeet : int
-        -canEat()
+        -int sizeInFeet
+        -CanEat()
     }
     class Zebra{
-        +is_wild : bool
-        +run()
+        +bool isWild
+        +Run()
     }
     Animal <|-- Duck
     Animal <|-- Fish
@@ -117,24 +117,24 @@ classDiagram
 %% First comment.
     %% Second comment.
     class Animal{
-        +age : int
-        +gender : string
+        +int age
+        +string gender
         +isMammal() bool
         +mate()
     }
     %% Third comment.
     class Duck{
-        +beakColor : string
+        +string beakColor
         +swim()
         +quack()
     }
     class Fish{
-        -sizeInFeet : int
-        -canEat()
+        -int sizeInFeet
+        -CanEat()
     }
     class Zebra{
-        +is_wild : bool
-        +run()
+        +bool isWild
+        +Run()
     }
     Animal <|-- Duck
     Animal <|-- Fish
@@ -147,8 +147,8 @@ mermaid 代码块中除了图表类型说明和注释以外的部分就是图表
 ```mermaid
 classDiagram
 class Animal{
-        +age : int
-        +gender : string
+        +int age 
+        +string gender
         +IsMammal() bool
         +Mate()
     }
@@ -160,8 +160,8 @@ class Animal{
 ```mermaid
 classDiagram
 class Animal{
-        +age : int
-        +gender : string
+        +int age 
+        +string gender
         +IsMammal() bool
         +Mate()
     }
