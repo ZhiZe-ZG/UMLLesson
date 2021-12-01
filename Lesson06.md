@@ -169,3 +169,27 @@ classDiagram
     Human *-- Hand
     Human *-- Head
 ```
+
+最后所有的关系描述都可以后加冒号然后加文字说明。例如：
+
+````
+```mermaid
+classDiagram
+    class Box{
+    }
+    class Apple{
+    }
+    Box "1" -- "*" Apple : Contains
+```
+````
+
+渲染为：
+
+```mermaid
+classDiagram
+    class Box{
+    }
+    class Apple{
+    }
+    Box "1" -- "*" Apple : Contains
+```
