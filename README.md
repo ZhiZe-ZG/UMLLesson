@@ -1,2 +1,2 @@
 # UML Lesson
-A lesson for UML.
+Lessons for UML.
