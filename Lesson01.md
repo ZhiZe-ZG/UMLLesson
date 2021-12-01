@@ -6,6 +6,7 @@ UML 本身只是一个语言规范，需要软件实现才能将 UML 文档转�
 
 >相关资源
 >
+>* [UML.org](https://www.uml.org/) 是 UML 的官方网站，可以在上边下载 UML 标准说明文件。
 >* [Visual Studio Code](https://code.visualstudio.com/) 代码编辑器前端
 >* [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) VS Code 插件，为 Markdown 内嵌 mermaid 提供预览。
 >* [Mermaid Markdown Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=bpruitt-goddard.mermaid-markdown-syntax-highlighting) VS Code 插件，为 Markdown 内嵌 mermaid 提供语法高亮。
