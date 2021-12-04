@@ -39,3 +39,8 @@ UML 的具体实现有很多。既可以使用通用图表自己逐个图形地�
 
 面向过程编程--状态图，流程图
 面向对象编程--类图，对象图
+
+ToDo
+
+* 适用于 C# 的 PlantUML （定义 sealed， virtula, override, new 等）
+* 适用于 Python 的
