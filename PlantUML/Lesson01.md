@@ -30,3 +30,5 @@ Alice -> Bob: test
 ```
 PlantUML: Export Current File Diagrams
 ```
+
+然后选择导出的格式。如果文档中有多对 `@startuml` 和 `@enduml` 标记，那么多张图片会一次性导出。
