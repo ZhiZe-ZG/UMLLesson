@@ -9,6 +9,7 @@ UML 的具体实现有很多。既可以使用通用图表自己逐个图形地�
 > 相关资源
 > * [UML.org](https://www.uml.org/) 是 UML 的官方网站，可以在上边下载 UML 标准说明文件。
 > * [PlantUML](https://plantuml.com/en/) 是一个用标记语言制作图表的库，它支持大部分 UML 标准图表的描述和绘制。
+> * [Ashley's PlantUML Doc](https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html) 是 PlantUML 的一个文档，说明了所有 PlantUML 中参数和命令的左右。
 > * [VSCode PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) 是一个 Visual Studio Code 的插件，它可以在 Visual Studio Code 中提供 PlantUML 文本的预览和渲染导出。
 > * [Mermaid](https://mermaid-js.github.io/mermaid/) 是一个用标记语言制作图表的库，其中实现了部分 UML 的图表类型。
 
