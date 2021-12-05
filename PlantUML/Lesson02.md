@@ -22,10 +22,10 @@ enum Color{
 
 ```PlantUML
 class Person{
-    - age:int
-    + name:string
-    + Eat(food:Food)
-    + Say() : string
+    - int age
+    + string name
+    + Eat(Food food)
+    + string Say()
 }
 ```
 
@@ -42,16 +42,16 @@ class Person{
 
 ### 属性成员
 
-属性成员除了访问权限控制，由变量名和变量类型两部分组成。变量名和类型名的先后顺序其实比较灵活。你可以像 C 那样先写类型名，空一格写变量名，也可以像 Python 类型标注那样先写变量名再写冒号，冒号后写类型名。不管选择哪种写法，统一就好，本教程中使用类型后置的写法，例如：
+属性成员除了访问权限控制，由变量名和变量类型两部分组成。变量名和类型名的先后顺序其实比较灵活。你可以像 C 那样先写类型名，空一格写变量名，也可以像 Python 类型标注那样先写变量名再写冒号，冒号后写类型名。不管选择哪种写法，统一就好，本教程中使用类型前置的写法，例如：
 
 ```PlantUML
-+ name : string
++ string name 
 ```
 
 如果有必要，你还可以用 `=` 给属性设置默认值，例如：
 
 ```PlantUML
-+ name : string = "ZhiZe"
++ string name = "ZhiZe"
 ```
 
 ### 方法成员
@@ -63,7 +63,7 @@ class Person{
 一些方法的例子如下：
 
 ```PlantUML
-+ CalculateVolume(length : int, width : int = 5, height : int = 2) : int
++ CalculateVolume(int length, int width = 5, int height = 2) : int
 ```
 
 ### 抽象类和抽象方法
@@ -85,10 +85,10 @@ abstract Animal{
 
 ```PlantUML
 class ComplexNumber{
-    + real : float
-    + imag : float
-    + {static} pi : ComplexNumber
-    + {static} Add(a : ComplexNumber, b : ComplexNumber) : ComplexNumber
+    + float real
+    + float imag
+    + {static} ComplexNumber pi 
+    + {static} ComplexNumber Add(ComplexNumber a, ComplexNumber b)
 }
 ```
 
@@ -107,10 +107,10 @@ class ComplexNumber{
 
 ```PlantUML
 class ComplexNumber{
-    + real : float
-    + imag : float
-    + {const} pi : ComplexNumber
-    + {override} Add(a : ComplexNumber, b : ComplexNumber) : ComplexNumber
+    + float real
+    + float imag
+    + {const} ComplexNumber pi
+    + {override} ComplexNumber Add(ComplexNumber a, ComplexNumber b)
 }
 ```
 
@@ -122,8 +122,8 @@ class ComplexNumber{
 
 ```PlantUML
 interface ICountable{
-    GetCount() : int
-    AddOne() : int
+    int GetCount() 
+    int AddOne() 
 }
 ```
 
@@ -143,7 +143,7 @@ class User {
   .. private data ..
   int age
   .. encrypted ..
-  String password
+  string password
 }
 ```
 
@@ -174,8 +174,8 @@ enum Char {
 
 ```PlantUML
 class A<T1, T2>{
-    + {static} Method1<T>(x : T1, y : T) : T2
-    + attribute1 : List<List<int>>
+    + {static} T2 Method1<T>(T1 x, T y)
+    + List<List<int>> attribute1
 }
 ```
 
@@ -188,11 +188,3 @@ class A <<sealed>>{
     
 }
 ```
-
-
-
-@startuml
-class A <<sealed>>{
-
-}
-@enduml
