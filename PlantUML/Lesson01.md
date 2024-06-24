@@ -27,7 +27,7 @@ Alice -> Bob: test
 
 你可以创建一个纯文本文件，把这些内容复制进去，重命名为以 `.plantuml` 后缀的名称。然后，用安装好插件的 Visual Studio Code 打开。按下 Alt + D 来预览图片。如果你要导出图片，可以使用 Ctrl + Shift + P 打开命令行输入命令：
 
-```
+```text
 PlantUML: Export Current File Diagrams
 ```
 
