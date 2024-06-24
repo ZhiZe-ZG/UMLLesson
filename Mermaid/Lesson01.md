@@ -16,14 +16,14 @@ UML 本身只是一个语言规范，需要软件实现才能将 UML 文档转�
 
 在 Markdown 文件中，使用以下格式可以嵌入 mermaid 代码块：
 
-````
+````markdown
 ```mermaid
 ```
 ````
 
 一个 mermaid 代码块会被当作一幅图像渲染。在代码块内第一行，需要首先标明 mermaid 图像类别，例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
 ```
@@ -31,7 +31,7 @@ classDiagram
 
 然后可以添加一些内容描述的代码，例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Animal{
@@ -89,7 +89,7 @@ classDiagram
 
 如果想在 mermaid 代码中增加注释代码，可以以 `%%` 开头。如果一行的`%%`之前只有空白符，它仍然是注释。例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
 %% First comment.
@@ -153,7 +153,7 @@ classDiagram
 
 mermaid 代码块中除了图表类型说明和注释以外的部分就是图表的内容描述。不难看出，这些内容大致分为两种单元。一类是定义节点的。例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
 class Animal{
@@ -179,6 +179,6 @@ class Animal{
 
 还有一类定义了节点之间的联线，例如之前代码中的这一行定义了 `Animal` 和 `Duck` 之间的连线。
 
-```
+```markdown
 Animal <|-- Duck
 ```
