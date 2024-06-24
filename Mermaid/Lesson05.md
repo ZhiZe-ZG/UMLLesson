@@ -4,7 +4,7 @@
 
 这是一个 `B` 类和类 `C` 继承了 `A` 类的例子（箭头指向的地方是父类）：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class A{
@@ -36,7 +36,7 @@ classDiagram
 
 例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class IA{
