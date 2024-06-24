@@ -2,7 +2,7 @@
 
 如果两个类之间仅仅是有相关关系，没有继承关系，那么可以使用 `--` 联接。例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Teacher{
@@ -28,7 +28,7 @@ classDiagram
 
 例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Book{
@@ -54,7 +54,7 @@ classDiagram
 
 如果类 `A` 可以由类 `B`， `C`， `D` 等组合而成，则可用聚合关系表示。其符号为 `o--`。其中 `o` 一端指向总体 `A`， `--` 一端指向表示部分的 `B`， `C`， `D`。例如一个教室的组成可以这样表示：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class ClassRoom{
@@ -100,7 +100,7 @@ classDiagram
 
 一个关系符号的两端都可以加这种说明。例如一个教室可以包含多个桌子和椅子可以这样表示：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class ClassRoom{
@@ -136,7 +136,7 @@ classDiagram
 
 组合关系类似聚合关系，但是它比聚合关系更强。如果聚合关系中的一个组件缺失了不会对总体造成损害，但是如果组合关系中的部件缺失就会对总体造成损害。组合关系使用 `*--` 表示， `*` 一端指向总体。例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Human{
@@ -172,7 +172,7 @@ classDiagram
 
 最后所有的关系描述都可以后加冒号然后加文字说明。例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Box{
