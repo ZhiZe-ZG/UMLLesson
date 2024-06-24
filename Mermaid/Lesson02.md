@@ -2,7 +2,7 @@
 
 Class Diagram 图中节点以类节点为主。类节点由三个部分组成。其一是关键词 `class`，其二是类名，其三是花括号中的代码块。例如一个名为 `Animal` 的类可以表示为：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Animal{
@@ -31,7 +31,7 @@ classDiagram
 
 一些典型的属性可以表示为：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Animal{
@@ -55,19 +55,19 @@ classDiagram
 
 一个简单的无参数列表方法可以表示为：
 
-```
+```markdown
 +IsMammal() bool
 ```
 
 没有返回值的方法则可以不标注返回值类型，例如：
 
-```
+```markdown
 +Eat(Food food)
 ```
 
 非空的输入参数列表中每一项又由三部分组成——变量名、冒号和类型——这和属性的标注方法类似。例如：
 
-```
+```markdown
 +Add(int x, int y) int
 ```
 
@@ -75,7 +75,7 @@ classDiagram
 
 例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Animal{
@@ -101,13 +101,13 @@ classDiagram
 
 这里举一个例子：
 
-```
+```markdown
 +Divide(in int dividend, in int divisor, out int remainder) int 
 ```
 
-对于类属性和类方法，还有一个通用的修饰——静态修饰。静态的属性和方法并不属于类的实例而是属于类本身，可以通过类名直接访问并由所属类的所有类实例共享。 mermaid 本身支持使用 `$` 表示静态修饰，并将其修饰为带下划线的形式。对于属性来说， `$` 放置于其变量名之后，对于方法来说， `$` 放置在参数列表括号之后。例如： 
+对于类属性和类方法，还有一个通用的修饰——静态修饰。静态的属性和方法并不属于类的实例而是属于类本身，可以通过类名直接访问并由所属类的所有类实例共享。 mermaid 本身支持使用 `$` 表示静态修饰，并将其修饰为带下划线的形式。对于属性来说， `$` 放置于其变量名之后，对于方法来说， `$` 放置在参数列表括号之后。例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Complex{
