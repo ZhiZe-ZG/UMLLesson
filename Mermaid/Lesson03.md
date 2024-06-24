@@ -4,7 +4,7 @@
 
 抽象类在 mermaid 中没有专门的关键词，而是通过在普通类花括号内第一行加 `<<abstract>>` 表示。一个抽象的 `Animal` 类可以记为：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Animal{
@@ -26,7 +26,7 @@ classDiagram
 
 抽象方法则通过在函数参数列表括号后边加 `*` 来表示。 mermaid 可以将抽象方法自动渲染为斜体。例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class Animal{
@@ -67,7 +67,7 @@ classDiagram
 
 接口类则可以通过加 `<<interface>>` 表示，接口中的方法则都不需要访问控制标记。例如：
 
-````
+````markdown
 ```mermaid
 classDiagram
     class IComparable{
