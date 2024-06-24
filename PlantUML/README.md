@@ -5,5 +5,5 @@
 需要注意的是 PlantUML 原程序本身是由 Java 编写的。 Visual Studio Code 的 PlantUML 插件虽然集成了 PlantUML 的 Java 程序包和 PlantUML 依赖的 Graphviz，却没有集成 Java。所以你需要在自己的电脑上安装 Java 运行时环境才能正常使用这个插件。
 
 1. [PlantUML 基础](./Lesson01.md)
-2. [类节点](./Lesson02.md)
-3. [抽象类和接口](./Lesson03.md)
+2. [类型元素的表示](./Lesson02.md)
+3. [类型关系的表示](./Lesson03.md)
